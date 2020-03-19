@@ -116,6 +116,9 @@ aside section h2 {
 label {
     position: relative;
 }
+legend {
+    font-weight: bold;
+}
 span.label-text {
     position: absolute;
     background-color: #fff;
@@ -142,16 +145,68 @@ fieldset {
     background-color: #35353B;
     padding: 1em 1em;
 }
-input[type="radio" i]{
-    padding: 0;
+input[type="radio" i]::before {
+    content: "";
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    border-radius: 2em;
+    visibility: visible;
+    border: 3px solid #35353B;
+    transition: 0.3s ease-out 0s;
+
 }
-.font label:nth-of-type(1) span {
+input[type="radio" i]:hover::before {
+    border:3px dotted green;
+    transform: rotate(0deg);
+    animation: buttonchecked 5s linear infinite;
+}
+
+@keyframes buttonchecked {
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+  
+
+input[type="radio" i]:checked::before 
+{
+    border:3px solid green;
+}
+input[type="radio" i] {
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    visibility: hidden;
+}
+#Black-textcolor::before {
+    background-color: black;
+}
+#White-textcolor::before {
+    background-color: white;
+}
+
+#White-shirtcolor::before {
+    background-color: white;
+}
+#Yellow-shirtcolor::before {
+    background-color: #CDBA54;
+}
+#Red-shirtcolor::before {
+    background-color: #AD0E20;
+}
+#Blue-shirtcolor::before {
+    background-color: #718EC6;
+}
+
+
+#fonts option:nth-of-type(1)  {
     font-family: sans-serif;
 }
-.font label:nth-of-type(2) span {
+#fonts option:nth-of-type(2)  {
     font-family: Streamster;
 }
-.font label:nth-of-type(3) span {
+#fonts option:nth-of-type(3)  {
     font-family: Nixies;
 }
 /****************************/

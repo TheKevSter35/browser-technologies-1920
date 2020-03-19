@@ -1,25 +1,24 @@
-//Font
 
-let Defaultfont = document.getElementById('Default-font')
-Defaultfont.addEventListener("click", ChangeDefaultfont);
+// let Defaultfont = document.getElementById('Default-font')
+// Defaultfont.addEventListener("click", ChangeDefaultfont);
 
-function ChangeDefaultfont() {
-    document.getElementById("textcanvas").style.fontFamily = ('Raleway')
-}
-let Streamster = document.getElementById('Streamstar-font')
-Streamster.addEventListener("click", ChangeStreamsterfont);
+// function ChangeDefaultfont() {
+//     document.getElementById("textcanvas").style.fontFamily = ('Raleway')
+// }
+// let Streamster = document.getElementById('Streamstar-font')
+// Streamster.addEventListener("click", ChangeStreamsterfont);
 
-function ChangeStreamsterfont() {
-    document.getElementById("textcanvas").style.fontFamily = ('Streamster')
+// function ChangeStreamsterfont() {
+//     document.getElementById("textcanvas").style.fontFamily = ('Streamster')
 
-}
-let Learningblocks = document.getElementById('Learningblocks-font')
-Learningblocks.addEventListener("click", ChangeLearningblocksfont);
+// }
+// let Learningblocks = document.getElementById('Learningblocks-font')
+// Learningblocks.addEventListener("click", ChangeLearningblocksfont);
 
-function ChangeLearningblocksfont() {
-    document.getElementById("textcanvas").style.fontFamily = ('Nixies')
+// function ChangeDefaultfont() {
+//     document.getElementById("textcanvas").style.fontFamily = ('Raleway')
 
-}
+// }
 
 //text input
 let textInput = document.getElementById('textInputButton')

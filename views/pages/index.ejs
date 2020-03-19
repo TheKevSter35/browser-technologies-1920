@@ -36,16 +36,22 @@
                     <button type="button" id="textInputButton">Add text</button>
                 </fieldset>
                 <fieldset class="font">
-                    <legend>Font</legend>
-                    <label for="font1">
-                        <input type="radio" id="Default-font" name="font" checked>
-                        <span class ="label-text">Basic Font</span></label>
+                    <legend>Basic Font</legend>
+                    <select id="font">
+                        <option value="Default-font" >Default</option>
+                        <option value="Streamstar-font" >Streamstar</option>
+                        <option value="Nixies-font" >Nixies</option>
+                      </select>
+
+                    <!-- <label for="Default-font">Default-font
+                        <input type="radio" checked>
+                        <span class ="label-text">Default-font</span></label>
                     <label for="font2">
-                        <input type="radio" id="Streamstar-font" name="font" >
-                        <span class ="label-text">Streamstar</span></label>
+                        <input type="radio" id="Streamstar-font" name="font2" >
+                        
                     <label for="font3">
-                        <input type="radio" id="Learningblocks-font" name="font">
-                        <span class ="label-text">Nixies</span></label>
+                        <input type="radio" id="Learningblocks-font" name="font3">
+                        <span class ="label-text">Nixies</span></label> -->
                 </fieldset>
                 <fieldset>
                     <legend>Text color</legend>
@@ -64,7 +70,7 @@
                     <label for="White-shirtcolor">
                         <input type="radio" id="White-shirtcolor" name="shirtcolor" checked>
                         <span class ="label-text">Ghost White</span></label>
-                    <label for="Yellow-shirtcoloR">
+                    <label for="Yellow-shirtcolor">
                         <input type="radio" id="Yellow-shirtcolor" name="shirtcolor" alt="Banana Yellow">
                         <span class ="label-text">Banana Yellow</span>
                         
