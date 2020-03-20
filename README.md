@@ -44,7 +44,6 @@ will add later
 
 ### Wishlist
 - [ ] if user choose a yellow shirt he can't use white text (js)
-- 
 
 ### For the teachers 
 
