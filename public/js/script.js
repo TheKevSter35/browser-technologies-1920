@@ -1,24 +1,24 @@
 
-// let Defaultfont = document.getElementById('Default-font')
-// Defaultfont.addEventListener("click", ChangeDefaultfont);
+let Defaultfont = document.getElementById('Default-font')
+Defaultfont.addEventListener("click", ChangeDefaultfont);
 
-// function ChangeDefaultfont() {
-//     document.getElementById("textcanvas").style.fontFamily = ('Raleway')
-// }
-// let Streamster = document.getElementById('Streamstar-font')
-// Streamster.addEventListener("click", ChangeStreamsterfont);
+function ChangeDefaultfont() {
+    document.getElementById("textcanvas").style.fontFamily = ('Raleway')
+}
+let Streamster = document.getElementById('Streamstar-font')
+Streamster.addEventListener("click", ChangeStreamsterfont);
 
-// function ChangeStreamsterfont() {
-//     document.getElementById("textcanvas").style.fontFamily = ('Streamster')
+function ChangeStreamsterfont() {
+    document.getElementById("textcanvas").style.fontFamily = ('Streamster')
 
-// }
-// let Learningblocks = document.getElementById('Learningblocks-font')
-// Learningblocks.addEventListener("click", ChangeLearningblocksfont);
+}
+let Learningblocks = document.getElementById('Learningblocks-font')
+Learningblocks.addEventListener("click", ChangeLearningblocksfont);
 
-// function ChangeDefaultfont() {
-//     document.getElementById("textcanvas").style.fontFamily = ('Raleway')
+function ChangeLearningblocksfont() {
+    document.getElementById("textcanvas").style.fontFamily = ('Nixies')
 
-// }
+}
 
 //text input
 let textInput = document.getElementById('textInputButton')
@@ -52,7 +52,7 @@ let White = document.getElementById('White-shirtcolor')
 White.addEventListener("click", ShirtWhite);
 
 function ShirtWhite() {
-    document.getElementById("shirtcanvas").src = "../source/pictures/shirts/white.jpg"   
+    document.getElementById("shirtcanvas").src = "../source/pictures/shirts/whiteshirt.jpg"   
 }
 
 let Yellow = document.getElementById('Yellow-shirtcolor')

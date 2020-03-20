@@ -144,6 +144,7 @@ figure {
 .shirteditor {
     max-width: 75em;
     margin: 0 auto;
+    color:#fff;
 }
 #editor main, #editor aside {
     width: 50%;
@@ -151,7 +152,8 @@ figure {
     min-height: calc(100vh - 330px);
     
 }
-main h2 {
+#editor main h2 {
+    color:#fff;
 }
 body > section {
     text-align: center;
@@ -239,6 +241,9 @@ input[type="radio" i] {
     height: 2em;
     visibility: hidden;
 }
+
+
+
 #Black-textcolor::before {
     background-color: black;
 }
@@ -259,14 +264,33 @@ input[type="radio" i] {
     background-color: #718EC6;
 }
 
-
-#fonts option:nth-of-type(1)  {
+.font input[type="radio" i] {
+    width: 0em;
+    position: absolute;
+    height: 0em;
+    opacity: 0;
+}
+.font input[type="radio" i]::before{
+    background-color: #000;
+    width: 0em;
+    height: 0em;
+}
+.font label {
+    border-bottom: 4px solid transparent;
+    padding-bottom: 0.4em;
+    font-size: 0.9em;
+    padding: 0 0.5em;
+}
+.font label:focus, .font label:hover, .font label:checked {
+    border-color: white;
+}
+.font label:nth-of-type(1) span {
     font-family: sans-serif;
 }
-#fonts option:nth-of-type(2)  {
+.font label:nth-of-type(2) span  {
     font-family: Streamster;
 }
-#fonts option:nth-of-type(3)  {
+.font label:nth-of-type(3) span {
     font-family: Nixies;
 }
 /****************************/

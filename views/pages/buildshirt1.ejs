@@ -12,78 +12,97 @@
     <nav>
 
     </nav>
-<section>
-    <h1>Design your own nerdy t-shirt</h1>
-<p>Designing Custom T-shirts Has Never Been Easier!.</p>
-</section>
-<div class="shirteditor">
+    <section>
+        <h1>Step 1: Add </h1>
+        <p>Designing Custom T-shirts Has Never Been Easier!.</p>
+    </section>
+    <div class="shirteditor">
         <aside>
             <section>
-            
-  
+
+
                 <h2 id="textcanvas">Text</h2>
-                <img id='shirtcanvas' src="../source/pictures/shirts/white.jpg" alt="shirt canvas">
-        </section>
+                <img id='shirtcanvas' src="../source/pictures/shirts/whiteshirt.jpg" alt="shirt canvas">
+            </section>
         </aside>
 
         <main>
             <section>
                 <h2>editor</h2>
-            <form action="POST">
-                <fieldset>
-                    <legend>Text</legend>
-                    <input type="text" id="Shirttext" placeholder="Text Here">
-                    <button type="button" id="textInputButton">Add text</button>
-                </fieldset>
-                <fieldset class="font">
-                    <legend>Basic Font</legend>
-                    <select id="font">
-                        <option value="Default-font" >Default</option>
-                        <option value="Streamstar-font" >Streamstar</option>
-                        <option value="Nixies-font" >Nixies</option>
-                      </select>
+                <form action="/editor-step2">
+                    <form action="/final work">
+                        <fieldset>
+                            <legend>Text</legend>
+                            <input type="text" id="Shirttext" name="shirtText" value="<%= queries.shirtText %>"
+                                placeholder="Text Here">
+                            <button type="button" id="textInputButton">Add text</button>
+                        </fieldset>
+                        <fieldset class="font">
+                            <legend>Basic Font</legend>
+                         
 
-                    <!-- <label for="Default-font">Default-font
-                        <input type="radio" checked>
-                        <span class ="label-text">Default-font</span></label>
-                    <label for="font2">
-                        <input type="radio" id="Streamstar-font" name="font2" >
-                        
-                    <label for="font3">
-                        <input type="radio" id="Learningblocks-font" name="font3">
-                        <span class ="label-text">Nixies</span></label> -->
-                </fieldset>
-                <fieldset>
-                    <legend>Text color</legend>
-                    <label for="Black-textcolor">
-                        <input type="radio" id="Black-textcolor" name="textcolor" checked>
-                        <span class ="label-text">Soul Black</span></label>
-                    <label for="White-textcolor">
-                        <input type="radio" id="White-textcolor" name="textcolor">
-                        <span class ="label-text">Ghost White</span></label>
-                    <!-- <label for="font3">
-                        <input type="radio" id="Black-textcolor" name="textcolor">
-                        <span class ="label-text">Font1</span></label></label> -->
-                </fieldset>
-                <fieldset>
-                    <legend>Shirt Color</legend>
-                    <label for="White-shirtcolor">
-                        <input type="radio" id="White-shirtcolor" name="shirtcolor" checked>
-                        <span class ="label-text">Ghost White</span></label>
-                    <label for="Yellow-shirtcolor">
-                        <input type="radio" id="Yellow-shirtcolor" name="shirtcolor" >
-                        <span class ="label-text">Banana Yellow</span>
-                        
-                        
-                    </label>
-                    <label for="Red-shirtcolor">
-                        <input type="radio" id="Red-shirtcolor" name="shirtcolor">
-                        <span class ="label-text">BloodyMary Red</span> </label>
-                    <label for="Blue-shirtcolor">
-                        <input type="radio" id="Blue-shirtcolor" name="shirtcolor">
-                        <span class ="label-text">Blizzard Blue</span></label>
-                </fieldset>
-                <!-- <fieldset>
+                            <label for="Default-font">
+
+                                <input type="radio" id="Default-font" name="textFont" value="Default-font" checked>
+                    
+                                <span class="">Default</span></label>
+
+                            <label for="Streamstar-font">
+                                <input type="radio" id="Streamstar-font" name="textFont" value="Streamstar"
+                                    <% if (queries.textFont == "Streamstar") { %> <% } %>> 
+                                    <span class="">Streamstar</span></label>
+
+                                    <label for="Learningblocks-font">
+                                <input type="radio" id="Learningblocks-font" name="textFont" value="Nixies"
+                                    <% if (queries.textFont == "Nixies") { %> <% } %>> 
+                                    <span class="">Nixies</span></label>
+                                    
+                             
+                        </fieldset>
+                        <fieldset>
+                            <legend>Text color</legend>
+                            <label for="Black-textcolor">
+
+                                <input type="radio" id="Black-textcolor" name="textColor" value="#000"
+                                    <% if (queries.textColor == "#000") { %> <% } %>>
+                                <span class="label-text">Soul Black</span> </label>
+
+
+                            <label for="White-textcolor">
+
+                                <input type="radio" id="White-textcolor" name="textColor" value="#fff"
+                                    <% if (queries.textColor == "#fff") { %> <% } %>>
+                                <span class="label-text">Ghost White</span> </label>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Shirt Color</legend>
+
+                            <label for="White-shirtcolor">
+                                <input type="radio" id="White-shirtcolor" name="shirtColor" value="whiteshirt"
+                                    <% if (queries.shirtColor == "redshirt") { %> <% } %>>
+                                <span class="label-text">Ghost White</span> </label>
+
+                            <label for="Yellow-shirtcolor">
+                                <input type="radio" id="Yellow-shirtcolor" name="shirtColor" value="yellowshirt"
+                                    <% if (queries.shirtColor == "yellowshirt") { %> <% } %>>
+                                <span class="label-text">Banana Yellow</span>
+                            </label>
+
+                            <label for="Red-shirtcolor">
+                                <input type="radio" id="Red-shirtcolor" name="shirtColor" value="redshirt"
+                                    <% if (queries.shirtColor == "redshirt") { %> <% } %>>
+                                <span class="label-text">Bloody Red</span>
+                            </label>
+
+                            <label for="Blue-shirtcolor">
+                                <input type="radio" id="Blue-shirtcolor" name="shirtColor" value="blueshirt"
+                                    <% if (queries.shirtColor == "blueshirt") { %> <% } %>>
+                                <span class="label-text">Blizzard Blue</span>
+                            </label>
+
+                        </fieldset>
+                        <!-- <fieldset>
                     <legend>Shirt pattern</legend>
                     <label for="font1">
                         <input type="radio" id="font1" name="shirtpatern">
@@ -94,16 +113,16 @@
                     <label for="font3">
                         <input type="radio" id="font3" name="shirtpatern">
                         Font3</label>
-                </fieldset> -->
-                <button type="submit">Submit</button>
+                </fieldset>  -->
+                        <button type="submit" value="Submit">Submit</button>
 
 
-            </form>
-        </section>
+                    </form>
+            </section>
         </main>
-        </div>
+    </div>
 
- 
+
 
 
 
