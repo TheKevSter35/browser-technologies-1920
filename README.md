@@ -34,16 +34,16 @@ will add later
 - [x] start by making the html page
 - [x] basic CSS
 - [X] Use npm
-- [ ] Split the form in a progressive disclosure to make it in layers
-- [ ] Make a start screen so user can make a new shirt or edit a old one.
+- [x] Make a start screen so user can make a new shirt or edit a old one.
+- [ ] Update home page
+- [ ] Finish design page
 - [ ] Print the design 
 - [ ] save the design (unique code or save the link)
-- [ ] JS make it more interactief
-- [ ] css Make more animation like the buttons.
- 
+- [x] JS make it more interactief 
 
 ### Wishlist
 - [ ] if user choose a yellow shirt he can't use white text (js)
+- [ ] Split the form in a progressive disclosure to make it in layers
 
 ### For the teachers 
 
