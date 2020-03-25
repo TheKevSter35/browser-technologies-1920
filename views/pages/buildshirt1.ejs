@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>Nerdy shirt ink</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet" />
-</head>
+
+    <%- include ('../partials/head.ejs') %>
 
 <body id="editor">
-    <nav>
-
-    </nav>
+    <%- include ('../partials/nav.ejs') %>
     <section>
-        <h1>Step 1: Add </h1>
-        <p>Designing Custom T-shirts Has Never Been Easier!.</p>
+        <h1>Designing Custom T-shirts Has Never Been Easier!.</h1>
+
     </section>
     <div class="shirteditor">
         <aside>
@@ -29,7 +23,7 @@
         <main>
             <section>
                 <h2>editor</h2>
-                <form action="/editor-step2">
+                <form action="/editor-finaldesign">
                     <form action="/final work">
                         <fieldset>
                             <legend>Text</legend>
@@ -102,18 +96,6 @@
                             </label>
 
                         </fieldset>
-                        <!-- <fieldset>
-                    <legend>Shirt pattern</legend>
-                    <label for="font1">
-                        <input type="radio" id="font1" name="shirtpatern">
-                        Font1</label>
-                    <label for="font2">
-                        <input type="radio" id="font2" name="shirtpatern">
-                        Font2</label>
-                    <label for="font3">
-                        <input type="radio" id="font3" name="shirtpatern">
-                        Font3</label>
-                </fieldset>  -->
                         <button type="submit" value="Submit">Submit</button>
 
 

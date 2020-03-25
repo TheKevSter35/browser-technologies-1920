@@ -26,12 +26,38 @@ body {
     min-height: calc(100vh - 0px);
     background-color: #202024;
 }
-
+body > section {
+    padding-top: 5em;
+}
+nav {
+    background-color: #202024;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #fff;
+    z-index: 9;
+    padding: 1em;
+    display: inline-flex;
+}
+nav img {
+    width: 2em;
+}
+nav li {
+    float: left;
+    text-align: center;
+    margin: 0 0.5em;
+}
+nav li a {
+    color:#fff;
+    text-decoration: none;
+}
 ul {
     text-decoration: none;
     margin: 0;
     list-style: none;
     padding: 0;
+    width: 100%;
 }
 
 section {
@@ -86,9 +112,12 @@ h3 {
 
 /* homepage */
 #start {
-    
     background-color: #DBDBDD;
 }
+#start nav {
+    display: none;
+}
+
 #start main {
     margin: 0 auto;
     text-align: center;
@@ -136,9 +165,8 @@ h3 {
     min-height: 390px;
 }
 
-figure {
-    background-image: url(../source/pictures/shirts/white.jpg);
-    background-size: cover;
+#start figure {
+   padding: 1em;
 }
 /* ------------------- */
 .shirteditor {
@@ -293,6 +321,81 @@ input[type="radio" i] {
 .font label:nth-of-type(3) span {
     font-family: Nixies;
 }
+
+
+#finaldesign .shirteditor {
+    padding-top: 3em;
+    min-height: 650px;
+    padding-bottom: 1em;
+}
+
+#finaldesign > section {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding: 5em 2em 2em 3em;
+    background: #202024;
+    background-image: linear-gradient(45deg,#380CD6 10%, #E50AE7 50%, #380CD6 100%);
+    background-size: 400%;
+    animation: colorshift 10s linear 0s infinite;
+}
+#finaldesign > section h1{
+    color:#fff;
+    font-size: 2rem;
+
+}
+#finaldesign .shirteditor aside, #finaldesign  .shirteditor main {
+    width: 50%;
+    float: left;
+}
+#finaldesign .shirteditor aside section{
+    padding:1em;
+    padding-top: 2em;
+}
+#finaldesign .shirteditor main section {
+    padding: 1em;
+}
+#finaldesign .shirteditor main section ul li {
+    margin: 1em 0;
+    background-color: #35353B;
+    padding: 1em 1em;
+    text-align: center;
+}
+#finaldesign .shirteditor main section ul h3{
+    color:#fff;
+    position: relative;
+}
+
+#finaldesign .settings {
+    padding: 1em;
+    background-color: #DBDBDD;
+    text-align: center;
+    margin-top: 3em;
+}
+
+#finaldesign .settings button, form > button {
+    padding: 1em 2em;
+    margin: 0 1em;
+    transition: 0.3s ease-in-out 0s;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+
+#finaldesign .settings button:first-child {
+    background-color: #fff;
+    color:#35353B;
+}
+#finaldesign .settings button:last-child {
+    background-color: #35353B;
+    color:#fff;
+}
+#finaldesign .settings button:hover, form > button:hover{
+background-image: linear-gradient(45deg,#380CD6 10%, #E50AE7 50%, #380CD6 100%);
+background-size: 400%;
+    animation: colorshift 10s linear 0s infinite;
+    color:#fff
+}
 /****************************/
 /*+++++MEDIA QUERIES+++++*/
 /*Bij de aangegeven max-width wordt de code uitgevoerd!*/
@@ -301,8 +404,37 @@ input[type="radio" i] {
 
 /*tablets landscape mode*/
 @media (max-width:60em) {
-    #music-libary section .results {
-        grid-template-columns: 1fr 1fr 1fr;
+    h1 {
+        font-size: 2.5em;
+    }
+    #start main{
+        padding: 7em 2em;
+    }
+    #start section {
+        padding-bottom: 0em;
+    }
+    #start .description, #start figure, #editor main, #editor aside{
+        float: unset;
+        width: unset;
+        margin: 0 auto;
+        max-width: 35em;
+        min-height: unset;
+    }
+    #finaldesign .shirteditor aside, #finaldesign .shirteditor main {
+        float: unset;
+        width: unset;
+        margin: 0 auto;
+        max-width: 30em;
+    }
+    #finaldesign .shirteditor {
+        padding-bottom: 6em;
+    }
+    #finaldesign .settings {
+        position: absolute;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 }
 
