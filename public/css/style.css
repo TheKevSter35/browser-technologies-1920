@@ -223,9 +223,10 @@ span.label-text {
     transition: 0.3s ease-in-out 0s;
     border: 2px solid #000;
     border-radius: 0.5em;
-    width: 9em;
+    width: 11em;
     text-align: center;
     font-size: medium;
+    z-index: 10;
 }
 input:hover ~ span.label-text {
     opacity: 1;
@@ -290,6 +291,24 @@ input[type="radio" i] {
 }
 #Blue-shirtcolor::before {
     background-color: #718EC6;
+}
+#Black-shirtcolor::before {
+    background-color: Black;
+}
+#Purple-shirtcolor::before {
+    background-color: purple;
+}
+#Orange-shirtcolor::before {
+    background-color: orange;
+}
+#Green-shirtcolor::before {
+    background-color: Green;
+}
+#Gray-shirtcolor::before {
+    background-color: gray;
+}
+#Pink-shirtcolor::before {
+    background-color: Pink;
 }
 
 .font input[type="radio" i] {

@@ -55,6 +55,50 @@ function ShirtWhite() {
     document.getElementById("shirtcanvas").src = "../source/pictures/shirts/whiteshirt.jpg"   
 }
 
+let Black = document.getElementById('Black-shirtcolor')
+Black.addEventListener("click", ShirtBlack);
+
+function ShirtBlack() {
+    document.getElementById("shirtcanvas").src = "../source/pictures/shirts/blackshirt.jpg"
+}
+
+let Gray = document.getElementById('Gray-shirtcolor')
+Gray.addEventListener("click", ShirtGray);
+
+function ShirtGray() {
+    document.getElementById("shirtcanvas").src = "../source/pictures/shirts/grayshirt.jpg"
+}
+
+let Green = document.getElementById('Green-shirtcolor')
+Green.addEventListener("click", ShirtGreen);
+
+function ShirtGreen() {
+    document.getElementById("shirtcanvas").src = "../source/pictures/shirts/greenshirt.jpg"
+}
+
+let Purple = document.getElementById('Purple-shirtcolor')
+Purple.addEventListener("click", ShirtPurple);
+
+function ShirtPurple() {
+    document.getElementById("shirtcanvas").src = "../source/pictures/shirts/purpleshirt.jpg"
+}
+
+let Orange = document.getElementById('Orange-shirtcolor')
+Orange.addEventListener("click", ShirtOrange);
+
+function ShirtOrange() {
+    document.getElementById("shirtcanvas").src = "../source/pictures/shirts/orangeshirt.jpg"
+}
+
+let Pink = document.getElementById('Pink-shirtcolor')
+Pink.addEventListener("click", ShirtPink);
+
+function ShirtPink() {
+    document.getElementById("shirtcanvas").src = "../source/pictures/shirts/pinkshirt.jpg"
+}
+
+
+
 let Yellow = document.getElementById('Yellow-shirtcolor')
 Yellow.addEventListener("click", ShirtYellow);
 
