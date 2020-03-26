@@ -213,11 +213,11 @@ span.label-text {
     position: absolute;
     background-color: #fff;
     color: #000;
-    left: -55px;
+    left: -65px;
     right: 0;
     /* display: inline-table; */
     padding: 0.5em;
-    bottom: -35px;
+    bottom: -44px;
     opacity: 0;
     z-index: 0;
     transition: 0.3s ease-in-out 0s;
@@ -227,9 +227,11 @@ span.label-text {
     text-align: center;
     font-size: medium;
     z-index: 10;
+    display: none;
 }
 input:hover ~ span.label-text {
     opacity: 1;
+    display: block;
 }
 fieldset {
     margin: 1em 0;
@@ -392,13 +394,19 @@ input[type="radio" i] {
     margin-top: 3em;
 }
 
-#finaldesign .settings button, form > button {
+#finaldesign .settings button, form > button, #finaldesign .settings a {
     padding: 1em 2em;
     margin: 0 1em;
     transition: 0.3s ease-in-out 0s;
     border: 1px solid #000;
     cursor: pointer;
     border-radius: 0.5em;
+    font-size: 0.8em;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    font-family: Raleway,sans-serif;
 }
 
 #finaldesign .settings button:first-child {
@@ -409,7 +417,7 @@ input[type="radio" i] {
     background-color: #35353B;
     color:#fff;
 }
-#finaldesign .settings button:hover, form > button:hover{
+#finaldesign .settings button:hover, form > button:hover, #finaldesign .settings a:hover{
 background-image: linear-gradient(45deg,#380CD6 10%, #E50AE7 50%, #380CD6 100%);
 background-size: 400%;
     animation: colorshift 10s linear 0s infinite;
@@ -456,7 +464,13 @@ background-size: 400%;
         right: 0;
     }
 }
-
+textarea#url {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    z-index: -999;
+    position: absolute;
+}
 /*tablets portrait mode*/
 @media (max-width:45em) {
 

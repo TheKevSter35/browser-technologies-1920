@@ -7,7 +7,8 @@
 <body id="editor">
     <%- include ('../partials/nav.ejs') %>
     <section>
-        <h1>Designing Custom T-shirts Has Never Been Easier!.</h1>
+        <H1>Your design link:</H1>
+        <p id="urlLink"></p>
 
     </section>
     <div class="shirteditor">
@@ -15,7 +16,7 @@
             <section>
 
 
-                <h2 id="textcanvas">Text</h2>
+                <h2 id="textcanvas"><%= queries.shirtText %></h2>
                 <img id='shirtcanvas' src="../source/pictures/shirts/whiteshirt.jpg" alt="shirt canvas">
             </section>
         </aside>
@@ -26,7 +27,7 @@
                     <fieldset>
                         <legend>Text</legend>
                         <input type="text" id="Shirttext" name="shirtText" value="<%= queries.shirtText %>"
-                            placeholder="Text Here">
+                            placeholder="<%= queries.shirtText %>">
                         <button type="button" id="textInputButton">Add text</button>
                     </fieldset>
                     <fieldset class="font">
@@ -125,12 +126,12 @@
 
                     </fieldset>
                     
+                    
                     <button type="submit" value="Submit">Print Design</button>
                     <textarea id="url" rows="1" cols="30"></textarea>
                     <button formaction="/editor-editdesign" id="copyclipboard">Save   </button>
-
-
                 </form>
+                
             </section>
         </main>
     </div>
@@ -138,8 +139,9 @@
 
 
 
-    <script src="js/copyboard.js"></script>
+
     <script src="js/script.js"></script>
+    <script src="js/clipboard.js"></script>
 
 </body>
 
