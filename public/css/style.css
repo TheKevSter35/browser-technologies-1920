@@ -118,7 +118,7 @@ h3 {
     display: none;
 }
 
-#start main {
+#start main >section {
     margin: 0 auto;
     text-align: center;
     color: #fff;
@@ -127,6 +127,7 @@ h3 {
     background-image: linear-gradient(45deg,#380CD6 10%, #E50AE7 50%, #380CD6 100%);
     background-size: 400%;
     animation:colorshift 10s linear 0s infinite;
+    max-width: 100%;
 }
 #start main h1 {
     color: #fff;
@@ -145,28 +146,29 @@ h3 {
 }
 
 #start section {
-    max-width: 70em;
+    max-width: 100%;
     padding: 1em;
-    background-color: #DBDBDD;
-    margin: 0 auto;
     padding-bottom: 29em;
 }
-#start section:nth-of-type(1) {
-    padding: 7em;
-    background-color: #DBDBDD;
+#start > section:nth-of-type(1) {
+    padding: 4em;
+    background-color: #202024;
 }
-#start .description, #start figure {
-    width: 50%;
-    float: left;
-    text-align: left;
-    padding: 5.1em;
-    display: block;
-    margin: 0;
-    min-height: 390px;
+#start h2{
+color:#fff;
+}
+#start .previews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 4em;
 }
 
 #start figure {
-   padding: 1em;
+   padding: 0;
+   margin: 0.3em 0.6em;
+   width: 15em;
 }
 /* ------------------- */
 .shirteditor {
@@ -208,6 +210,7 @@ label {
 }
 legend {
     font-weight: bold;
+    color:inherit
 }
 span.label-text {
     position: absolute;
@@ -238,7 +241,9 @@ fieldset {
     background-color: #35353B;
     padding: 1em 1em;
 }
-input[type="radio" i]::before {
+input[type="radio" i]::before,
+input[type="radio" i]:before
+ {
     content: "";
     width: 2em;
     height: 2em;
@@ -247,9 +252,13 @@ input[type="radio" i]::before {
     visibility: visible;
     border: 3px solid #35353B;
     transition: 0.3s ease-out 0s;
-
+    left: 0;
+    right: 0;
+    top: -15px;
+    bottom: 0px;
 }
-input[type="radio" i]:hover::before {
+input[type="radio" i]:hover::before,
+input[type="radio" i]:hover:before {
     border:3px dotted green;
     transform: rotate(0deg);
     animation: buttonchecked 5s linear infinite;
@@ -262,54 +271,67 @@ input[type="radio" i]:hover::before {
   }
   
 
-input[type="radio" i]:checked::before 
+input[type="radio" i]:checked::before,
+input[type="radio" i]:checked:before  
 {
     border:3px solid green;
 }
 input[type="radio" i] {
-    padding: 0;
+    /* padding: 1em; */
     width: 2em;
     height: 2em;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 
 
-#Black-textcolor::before {
+#Black-textcolor::before,
+#Black-textcolor:before {
     background-color: black;
 }
-#White-textcolor::before {
+#White-textcolor::before,
+#White-textcolor:before {
     background-color: white;
 }
 
-#White-shirtcolor::before {
+#White-shirtcolor::before,
+#White-shirtcolor:before {
     background-color: white;
 }
-#Yellow-shirtcolor::before {
+#Yellow-shirtcolor::before,
+#Yellow-shirtcolor:before {
     background-color: #CDBA54;
 }
-#Red-shirtcolor::before {
+#Red-shirtcolor::before,
+#Red-shirtcolor:before {
     background-color: #AD0E20;
 }
-#Blue-shirtcolor::before {
+#Blue-shirtcolor::before,
+#Blue-shirtcolor:before {
     background-color: #718EC6;
 }
-#Black-shirtcolor::before {
+#Black-shirtcolor::before,
+#Black-shirtcolor:before {
     background-color: Black;
 }
-#Purple-shirtcolor::before {
+#Purple-shirtcolor::before,
+#Purple-shirtcolor:before {
     background-color: purple;
 }
-#Orange-shirtcolor::before {
+#Orange-shirtcolor::before,
+#Orange-shirtcolor:before {
     background-color: orange;
 }
-#Green-shirtcolor::before {
+#Green-shirtcolor::before,
+#Green-shirtcolor:before {
     background-color: Green;
 }
-#Gray-shirtcolor::before {
+#Gray-shirtcolor::before,
+#Gray-shirtcolor:before{
     background-color: gray;
 }
-#Pink-shirtcolor::before {
+#Pink-shirtcolor::before,
+#Pink-shirtcolor:before  {
     background-color: Pink;
 }
 
@@ -319,7 +341,8 @@ input[type="radio" i] {
     height: 0em;
     opacity: 0;
 }
-.font input[type="radio" i]::before{
+.font input[type="radio" i]::before,
+.font input[type="radio" i]:before{
     background-color: #000;
     width: 0em;
     height: 0em;
@@ -434,8 +457,9 @@ background-size: 400%;
     h1 {
         font-size: 2.5em;
     }
-    #start main{
+    #start main > section{
         padding: 7em 2em;
+        text-shadow: 0 0 black;
     }
     #start section {
         padding-bottom: 0em;
@@ -474,19 +498,29 @@ textarea#url {
 /*tablets portrait mode*/
 @media (max-width:45em) {
 
-    #music-libary section .results {
-        grid-template-columns: 1fr 1fr;
-    }
+    
 }
 
 
 
 /*mobile */
 @media (max-width:30em) {
-    #music-libary section .results {
-        grid-template-columns: 1fr;
-    }
+   
 }
+
+@supports span(::before) {
+    span.label-text {
+        background-color: #fff;
+        color: #000;
+        transition: 0.3s ease-in-out 0s;
+        border: 2px solid #000;
+        border-radius: 0.5em;
+        width: auto;
+        text-align: center;
+        font-size: medium;
+        z-index: 10;
+    }    
+  }
 
 /****************************/
 /*+++++++++++++++++++++++*/

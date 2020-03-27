@@ -17,49 +17,49 @@
 
 
                 <% if(queries.textColor == "#fff") { %>
-                    <h2 id=textCanvas style="color:#fff;">
-    
-                        <%= queries.shirtText %>
-    
-                    </h2>
-                    <% } else  { %>
-                    <h2 id=textCanvas style="color:#000;">
-    
-                        <%= queries.shirtText %>
-    
-                    </h2>
-                    <% } %>
-    
-                    <% if(queries.shirtColor == "yellowshirt") { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/yellowshirt.jpg" alt="shirt canvas">
-        
-                        <% } else if(queries.shirtColor == "redshirt")  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/redshirt.jpg" alt="shirt canvas">
-        
-                        <% } else if(queries.shirtColor == "blueshirt")  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/blueshirt.jpg" alt="shirt canvas">
-        
-                        <% } else if(queries.shirtColor == "blackshirt")  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/blackshirt.jpg" alt="shirt canvas">
-        
-                        <% } else if(queries.shirtColor == "grayshirt")  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/grayshirt.jpg" alt="shirt canvas">
-        
-                        <% } else if(queries.shirtColor == "purpleshirt")  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/purpleshirt.jpg" alt="shirt canvas">
-        
-                        <% } else if(queries.shirtColor == "orangeshirt")  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/orangeshirt.jpg" alt="shirt canvas">
-        
-                        <% } else if(queries.shirtColor == "pinkshirt")  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/pinkshirt.jpg" alt="shirt canvas">
-        
-                        <% } else if(queries.shirtColor == "greenshirt")  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/greenshirt.jpg" alt="shirt canvas">
-        
-                        <% } else  { %>
-                        <img id='shirtcanvas' src="../source/pictures/shirts/whiteshirt.jpg" alt="shirt canvas">
-                        <% } %>
+                <h2 id=textCanvas style="color:#fff;">
+
+                    <%= queries.shirtText %>
+
+                </h2>
+                <% } else  { %>
+                <h2 id=textCanvas style="color:#000;">
+
+                    <%= queries.shirtText %>
+
+                </h2>
+                <% } %>
+
+                <% if(queries.shirtColor == "yellowshirt") { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/yellowshirt.jpg" alt="shirt canvas">
+
+                <% } else if(queries.shirtColor == "redshirt")  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/redshirt.jpg" alt="shirt canvas">
+
+                <% } else if(queries.shirtColor == "blueshirt")  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/blueshirt.jpg" alt="shirt canvas">
+
+                <% } else if(queries.shirtColor == "blackshirt")  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/blackshirt.jpg" alt="shirt canvas">
+
+                <% } else if(queries.shirtColor == "grayshirt")  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/grayshirt.jpg" alt="shirt canvas">
+
+                <% } else if(queries.shirtColor == "purpleshirt")  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/purpleshirt.jpg" alt="shirt canvas">
+
+                <% } else if(queries.shirtColor == "orangeshirt")  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/orangeshirt.jpg" alt="shirt canvas">
+
+                <% } else if(queries.shirtColor == "pinkshirt")  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/pinkshirt.jpg" alt="shirt canvas">
+
+                <% } else if(queries.shirtColor == "greenshirt")  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/greenshirt.jpg" alt="shirt canvas">
+
+                <% } else  { %>
+                <img id='shirtcanvas' src="../source/pictures/shirts/whiteshirt.jpg" alt="shirt canvas">
+                <% } %>
             </section>
         </aside>
 
@@ -167,13 +167,13 @@
                         </label>
 
                     </fieldset>
-                    
-                    
+
+
                     <button type="submit" value="Submit">Print Design</button>
                     <textarea id="url" rows="1" cols="30"></textarea>
-                    <button formaction="/editor-editdesign" id="copyclipboard">Save   </button>
+                    <button formaction="/editor-editdesign" id="copyclipboard">Save </button>
                 </form>
-                
+
             </section>
         </main>
     </div>
@@ -184,84 +184,63 @@
 
     <script src="js/script.js"></script>
     <script src="js/clipboard.js"></script>
-    <% if(queries.textFont == "Streamstar") { %>
-        <script>
-             document.getElementById("Streamstar-font").checked = true;
-             document.getElementById('textCanvas').style.fontFamily = ('Streamster')
-        </script>
-        
-    
-        <% } else if(queries.textFont == "Nixies") { %>
-            <script>
-                document.getElementById("Learningblocks-font").checked = true;
-                document.getElementById('textCanvas').style.fontFamily = ('Nixies')
-            </script>
- <% } else  { %>
-    <script>
-         document.getElementById("Default-font").checked = true;
-        document.getElementById('textCanvas').style.fontFamily = ('Raleway')
-    </script>
+
+
+    // <% if(queries.textFont == "Streamstar") { %>
+    <script src="js/editor-fonts/streamster.js"></script>
+
+
+
+    <% } else if(queries.textFont == "Nixies") { %>
+    <script src="js/editor-fonts/nixies.js"></script>
+
+    <% } else  { %>
+
     <% } %>
+
     <% if(queries.textColor == "#fff") { %>
-        <script>
-             document.getElementById("White-textcolor").checked = true;
-        </script>
-        
-    
- <% } else  { %>
-    <script>
-          document.getElementById("Black-textcolor").checked = true;
-    </script>
+    <script src="js/editor-textcolor/white-textcolor.js"></script>
+
+
+    <% } else  { %>
+    <script src="js/editor-textcolor/black-textcolor.js"></script>
+
     <% } %>
 
 
 
     <% if(queries.shirtColor == "blackshirt") { %>
-        <script>
-             document.getElementById("Black-shirtcolor").checked = true;
+    <script src="js/editor-shirtcolor/black-shirtcolor.js"></script>
 
-        </script>
-        
+
+    <% } else if (queries.shirtColor == "grayshirt") { %>
+    ies.shirtColor == "greenshirt") { %>
+    <script src="js/editor-shirtcolor/gray-shirtcolor.js"></script>
+
+    <% } else if (queries.shirtColor == "greenshirt") { %>
+        <script src="js/editor-shirtcolor/green-shirtcolor.js"></script>
+
+    <% } else if (queries.shirtColor == "purpleshirt") { %>
+    <script src="js/editor-shirtcolor/purple-shirtcolor.js"></script>
+
+    <% } else if (queries.shirtColor == "orangeshirt") { %>
+    <script src="js/editor-shirtcolor/orange-shirtcolor.js"></script>
+
+    <% } else if (queries.shirtColor == "pinkshirt") { %>
+    <script src="js/editor-shirtcolor/pink-shirtcolor.js"></script>
+
+    <% } else if (queries.shirtColor == "yellowshirt") { %>
+       <script src="js/editor-shirtcolor/yellow-shirtcolor.js"></script>
+    <% } else if (queries.shirtColor == "redshirt") { %>
+        <script src="js/editor-shirtcolor/red-shirtcolor.js"></script>
+    <% } else if (queries.shirtColor == "blueshirt") { %>
+        <script src="js/editor-shirtcolor/blue-shirtcolor.js"></script>
+
+
+    <% } else  { %>
+
     
-        <% } else if (queries.shirtColor == "grayshirt") { %>
-            <script>
-                document.getElementById("Gray-shirtcolor").checked = true;
-            </script>
-             <% } else if (queries.shirtColor == "greenshirt") { %>
-                <script>
-                    document.getElementById("Green-shirtcolor").checked = true;
-                </script>
-                 <% } else if (queries.shirtColor == "purpleshirt") { %>
-                    <script>
-                        document.getElementById("Purple-shirtcolor").checked = true;
-                    </script>
-                     <% } else if (queries.shirtColor == "orangeshirt") { %>
-                        <script>
-                            document.getElementById("Orange-shirtcolor").checked = true;
-                        </script>
-                        <% } else if (queries.shirtColor == "pinkshirt") { %>
-                            <script>
-                                document.getElementById("Pink-shirtcolor").checked = true;
-                            </script>
-                             <% } else if (queries.shirtColor == "yellowshirt") { %>
-                                <script>
-                                    document.getElementById("Yellow-shirtcolor").checked = true;
-                                </script>
-                                 <% } else if (queries.shirtColor == "redshirt") { %>
-                                    <script>
-                                        document.getElementById("Red-shirtcolor").checked = true;
-                                    </script>
-                                    <% } else if (queries.shirtColor == "blueshirt") { %>
-                                        <script>
-                                            document.getElementById("Blue-shirtcolor").checked = true;
-                                        </script>
-    
-
- <% } else  { %>
-
-    <script>
-         document.getElementById("White-shirtcolor").checked = true;
-    </script>
+    <script src="js/editor-shirtcolor/white-shirtcolor.js"></script>
     <% } %>
 </body>
 
