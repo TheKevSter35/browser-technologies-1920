@@ -29,11 +29,9 @@ app.get('/', (req, res) => {
   })
 
   app.get('/editor-finaldesign', (req, res) => {
-    console.log(req.query);
     res.render('pages/final-build',  { queries: req.query })
   })
   app.get('/editor-editdesign', (req, res) => {
-    console.log(req.query)
     res.render('pages/editdesign',  
     { queries: req.query })
   })

@@ -1,18 +1,24 @@
-
-let Defaultfont = document.getElementById('Default-font')
+x = document.querySelectorAll(".label-text");
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.replace("label-text","label-text-active");
+    }
+   
+// let Defaultfont = document.getElementById('Default-font')
+let Defaultfont = document.querySelector("[id='Default-font']")
 Defaultfont.addEventListener("click", ChangeDefaultfont);
 
 function ChangeDefaultfont() {
     document.getElementById("textcanvas").style.fontFamily = ('Raleway')
 }
-let Streamster = document.getElementById('Streamstar-font')
+let Streamster = document.querySelector("[id='Streamstar-font']")
 Streamster.addEventListener("click", ChangeStreamsterfont);
 
 function ChangeStreamsterfont() {
     document.getElementById("textcanvas").style.fontFamily = ('Streamster')
 
 }
-let Learningblocks = document.getElementById('Learningblocks-font')
+let Learningblocks = document.querySelector("[id='Learningblocks-font']")
+
 Learningblocks.addEventListener("click", ChangeLearningblocksfont);
 
 function ChangeLearningblocksfont() {
@@ -21,7 +27,8 @@ function ChangeLearningblocksfont() {
 }
 
 //text input
-let textInput = document.getElementById('textInputButton')
+let textInput = document.querySelector("[id='textInputButton']")
+
 textInput.addEventListener("click", Shirttext);
 
 function Shirttext() {

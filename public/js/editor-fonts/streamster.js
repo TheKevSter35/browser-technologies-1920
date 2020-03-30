@@ -1,5 +1,5 @@
 
     document.getElementById("Streamstar-font").checked = true;
-    document.getElementById('textCanvas').style.fontFamily = ('Streamster')
+    document.getElementById('textcanvas').style.fontFamily = ('Streamster')
 
 

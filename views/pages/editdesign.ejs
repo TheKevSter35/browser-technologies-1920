@@ -7,7 +7,7 @@
 <body id="editor">
     <%- include ('../partials/nav.ejs') %>
     <section>
-        <H1>Your design link:</H1>
+        <H1>Copy and save the URL to continue later</H1>
         <p id="urlLink"></p>
 
     </section>
@@ -17,13 +17,13 @@
 
 
                 <% if(queries.textColor == "#fff") { %>
-                <h2 id=textCanvas style="color:#fff;">
+                <h2 id=textcanvas style="color:#fff;">
 
                     <%= queries.shirtText %>
 
                 </h2>
                 <% } else  { %>
-                <h2 id=textCanvas style="color:#000;">
+                <h2 id=textcanvas style="color:#000;">
 
                     <%= queries.shirtText %>
 
@@ -170,7 +170,7 @@
 
 
                     <button type="submit" value="Submit">Print Design</button>
-                    <textarea id="url" rows="1" cols="30"></textarea>
+        
                     <button formaction="/editor-editdesign" id="copyclipboard">Save and Refresh </button>
                 </form>
 

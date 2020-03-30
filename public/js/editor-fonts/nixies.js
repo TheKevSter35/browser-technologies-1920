@@ -1,5 +1,3 @@
-
-    document.getElementById("Learningblocks-font").checked = true;
-    document.getElementById('textCanvas').style.fontFamily = ('Nixies')
-
+document.querySelector("[id='Learningblocks-font']").checked = true;
+document.querySelector("h2").style.fontFamily = ('Nixies')
 

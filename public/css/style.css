@@ -21,13 +21,18 @@ html {
     color: #000f;
 }
 
+
+#urlLink {
+    margin: 1em;
+}
+
 body {
     margin: 0 auto;
     min-height: calc(100vh - 0px);
     background-color: #202024;
 }
 body > section {
-    padding-top: 5em;
+    padding-top: 7em;
 }
 nav {
     background-color: #202024;
@@ -61,7 +66,7 @@ ul {
 }
 
 section {
-    padding: 3em;
+    padding: 1.4em 3em;
 }
 
 p {
@@ -212,7 +217,29 @@ legend {
     font-weight: bold;
     color:inherit
 }
-span.label-text {
+
+
+input ~ span.label-text {
+    position: relative;
+    color: #fff;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 1;
+    z-index: 0;
+    transition: 0.3s ease-in-out 0s;
+    border: none;
+    border-radius: 0.5em;
+    text-align: center;
+    font-size: medium;
+    z-index: 10;
+    display: none;
+    display: inline;
+    top: -2px;
+    font-size: 0.9em;
+}
+
+span.label-text-active {
     position: absolute;
     background-color: #fff;
     color: #000;
@@ -232,7 +259,7 @@ span.label-text {
     z-index: 10;
     display: none;
 }
-input:hover ~ span.label-text {
+input:hover ~ span.label-text-active {
     opacity: 1;
     display: block;
 }
@@ -280,7 +307,7 @@ input[type="radio" i] {
     /* padding: 1em; */
     width: 2em;
     height: 2em;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 
@@ -464,18 +491,21 @@ background-size: 400%;
     #start section {
         padding-bottom: 0em;
     }
-    #start .description, #start figure, #editor main, #editor aside{
-        float: unset;
-        width: unset;
-        margin: 0 auto;
-        max-width: 35em;
-        min-height: unset;
-    }
+
+#start .description, #start figure, #editor main, #editor aside {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 35em;
+    min-height: 100%;
+}
+
     #finaldesign .shirteditor aside, #finaldesign .shirteditor main {
-        float: unset;
-        width: unset;
+        float: none;
+        width: 100%;
         margin: 0 auto;
         max-width: 30em;
+        min-height: 100%;
     }
     #finaldesign .shirteditor {
         padding-bottom: 6em;
@@ -487,13 +517,26 @@ background-size: 400%;
         left: 0;
         right: 0;
     }
-}
 textarea#url {
     opacity: 0;
     height: 0;
     width: 0;
     z-index: -999;
     position: absolute;
+}
+
+.shirteditor section {
+    padding-top: 3em;
+    padding-bottom:0;
+}
+.shirteditor main section {
+    padding: 1em 3em;
+}
+/* label {
+    display: flex;
+    flex-direction: row;
+} */
+
 }
 /*tablets portrait mode*/
 @media (max-width:45em) {
@@ -505,7 +548,13 @@ textarea#url {
 
 /*mobile */
 @media (max-width:30em) {
-   
+    aside section h2{
+        font-size: 1.4em;
+
+    }
+    input ~ span.label-text{
+        display: flex;
+    }
 }
 
 @supports span(::before) {
