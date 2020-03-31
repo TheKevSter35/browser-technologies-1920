@@ -37,7 +37,7 @@ Turning on CSS
 
 <img width="" alt="3bb6f22f53c71e0806f16c76a9ca49d6" src="https://user-images.githubusercontent.com/43183768/77924522-0908dc00-72a4-11ea-86ee-2745fe7aa668.png">
 
-It looks good. the buttons have colors and you see the fonts awesome!! but you still see a shirt it doens't to anything.
+It looks good. the buttons have colors and you see the fonts awesome!! but you still see a shirt it doens't do anything.
 
 
 <img width="" alt="06458ecf6c766aef7a904d5071f1bbac" src="https://user-images.githubusercontent.com/43183768/77925079-b8de4980-72a4-11ea-8100-1d25efa132eb.png">
