@@ -79,7 +79,7 @@ font-family: Streamster, sans-serif;
 <img width="" alt="9a7b97de12e3b7b4f5db9286f1b7a2cd" src="https://user-images.githubusercontent.com/43183768/77926293-3fdff180-72a6-11ea-81ac-92b959c821bd.png">
 
 
-unfortunately  IE doesn't support this so the radio buttons cant't be styled.  What i did. In JS it create a class that targets the span tag for the hover function. 
+unfortunately  IE  doesn't support this so the radio buttons cant't be styled.  What i did. In JS it create a class that targets the span tag for the hover function. (on edge this will not work because it can read this JS code)
 ```js
 x = document.querySelectorAll(".label-text");
     for (i = 0; i < x.length; i++) {
@@ -125,6 +125,46 @@ body > section {
     padding-top: 7em;
 }
 ```
+
+4. Firefox/edge Before and after (Input)
+To use ::before or ::after styling for radio buttons on firefix it needs a ```css -moz-appearance: initial;``` in order to style it . [The -moz-appearance](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance) The -moz-appearance CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme. without ```css -moz-appearance: initial;``` the radio buttons will remain grey. for Edge is this not possible
+
+```css
+input[type="radio"] {
+    position: relative;
+    -moz-appearance:initial
+}
+
+::before
+ {
+    content: "";
+    position: absolute;
+}
+
+```
+
+## Browsers and devices
+DesktopBrowser: Google Chrome 80
+
+DesktopBrowser: Firefox 74.0
+
+DesktopBrowser: Edge 18
+
+⋅DesktopBrowser: IE 11
+
+DesktopBrowser: Opera 67.0
+
+DesktopBrowser: Brave (Chrome 80)
+
+Apple macbook: Safari 11.1.2
+
+Apple Ipad: Safari IOS 13.3
+
+Apple Iphone: Safari IOS 13.3.1
+
+Oneplus 6: Android 10
+
+[Screenshots](https://github.com/TheKevSter35/browser-technologies-1920/wiki/Browser-tests)
 
 ### Backlog
 - [x] start by making the html page
