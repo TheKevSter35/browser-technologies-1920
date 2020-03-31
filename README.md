@@ -21,7 +21,7 @@ With nerdy shirt ink you can design you very own a nerdy shirt. you can add text
 
 ## Progressive enhancement
 
-We start with jsut a simple experiences (Plain html) so the core function will work. and then adding styling and JS to make the experiences even better.  
+We start with just a simple experiences (Plain html) so the core function will work. and then adding styling and JS to make the experiences even better.  
 
 #### Functional and reliable
 
