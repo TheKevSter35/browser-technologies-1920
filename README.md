@@ -29,7 +29,7 @@ Turning off JS and css
 
 <img width="" alt="8898dcffb9365ce1663c5e266fb0e752" src="https://user-images.githubusercontent.com/43183768/77923670-0d80c500-72a3-11ea-95b9-5baa6fae9be7.png">
 
-It looks boring and ugly but it work with all browsers that are used. Because js is disabeld the live preview dont work. But the input fields are visible so the user can see what he choose. You can still save the url and continue later. The print function also works you can see what the user have selected .
+It looks boring and ugly but it work with all browsers that are used. Because js is disabeld the live preview dont work. But the input fields are visible so the user can see what he choose. You can still save the url and continue later. 
 
 #### Usable
 
