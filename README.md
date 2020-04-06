@@ -169,7 +169,7 @@ Oneplus 6: Android 10
 
 ## Conclusion
 
-I have learned a lot from this course. It is important that an app/site needs to be accessible if some features not working or turned off by the user. Feature detection is not only very cool but also a must if you want everybody to use your product. I was surprised that the core function works on IE11 and edge. Also, i never knew that in Firefox (and IE11) you can't style radio buttons with ```css ::before ``` and ```css ::after ```so I learn something new about Firefox. Building the app/site in layers (html > css > js)  is a good way to make it accessible in every browser. Overall a cool and useful course to learn about different browsers and how they work and very valuable to know those features and learn ways to enhancement your app/site. 
+I have learned a lot from this course. It is important that an app/site needs to be accessible if some features not working or turned off by the user. Feature detection is not only very cool but also a must if you want everybody to use your product. My target was to make it work on IE11 because people are still using it and. I was surprised that the core function works on IE11 and edge. Also, i never knew that in Firefox (and IE11) you can't style radio buttons with ```css ::before ``` and ```css ::after ```so I learn something new about Firefox. Building the app/site in layers (html > css > js)  is a good way to make it accessible in every browser. Overall a cool and useful course to learn about different browsers and how they work and very valuable to know those features and learn ways to enhancement your app/site. 
 
 ### Backlog
 - [x] start by making the html page
