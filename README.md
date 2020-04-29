@@ -61,7 +61,7 @@ Wow you get a link.
 For the most part i use tags/code that will work on (almost) every browser but there are so fallbacks that i have implemented.
 
 #### HTML
-The only thing what i come across is that IE11 doesn't support ```<main>``` tag but it will go to the next tag and that is ```<section>
+The only thing what i come across is that IE11 doesn't support ```<main>``` tag but it will go to the next tag and that is ```<section> ```
 
 
 #### CSS and JS
